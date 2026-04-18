@@ -35,8 +35,8 @@ export default function SurahListClient({ surahs }: Props) {
 
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="relative text-center mb-10">
+    
+      <section className="relative text-center py-10  mb-10">
         {/* Background decoration */}
         <div
           className="absolute inset-x-0 -top-8 h-64 bg-gradient-to-b from-emerald-900/5 to-transparent
@@ -79,7 +79,7 @@ export default function SurahListClient({ surahs }: Props) {
         </div>
       </section>
 
-      {/* ── Results meta ── */}
+   
       {query && (
         <p className="text-sm text-gray-500 mb-4 text-center">
           {filtered.length === 0
@@ -88,7 +88,7 @@ export default function SurahListClient({ surahs }: Props) {
         </p>
       )}
 
-      {/* ── Grid ── */}
+      {/*Grid */}
       {filtered.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {filtered.map((surah) => (

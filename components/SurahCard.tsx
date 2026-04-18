@@ -22,17 +22,11 @@ const GRADIENT_PALETTE = [
   'from-red-50      to-rose-50',
 ];
 
-const NUMBER_BADGE_COLOURS = [
-  'bg-emerald-700', 'bg-sky-700',    'bg-violet-700',
-  'bg-amber-600',   'bg-rose-700',   'bg-cyan-700',
-  'bg-lime-700',    'bg-indigo-700', 'bg-orange-600',
-  'bg-fuchsia-700', 'bg-teal-700',   'bg-red-700',
-];
 
 export default function SurahCard({ surah }: Props) {
-  const colorIndex  = (surah.number - 1) % 12;
-  const gradient    = GRADIENT_PALETTE[colorIndex];
-  const badgeColor  = NUMBER_BADGE_COLOURS[colorIndex];
+  const colorIndex = (surah.number - 1) % 12;
+  const gradient = GRADIENT_PALETTE[colorIndex];
+
 
   return (
     <Link
@@ -48,11 +42,15 @@ export default function SurahCard({ surah }: Props) {
                    bg-white/30 group-hover:scale-125 transition-transform duration-300 pointer-events-none"
       />
 
-      {/* Number badge */}
+
       <div
-        className={`${badgeColor} w-11 h-11 rounded-xl text-white text-sm font-bold
-                    flex items-center justify-center shrink-0 shadow-md
-                    group-hover:scale-110 transition-transform duration-200`}
+        className="relative z-10 w-8 h-8 rounded-xl 
+             bg-emerald-600/20 backdrop-blur-md 
+             border border-emerald-100/50
+             text-black text-sm font-medium 
+             flex items-center justify-center shrink-0 shadow-sm
+             group-hover:bg-emerald-200 group-hover:text-black/80 group-hover:shadow-md 
+             transition-all duration-300"
       >
         {surah.number}
       </div>
@@ -64,11 +62,11 @@ export default function SurahCard({ surah }: Props) {
             {surah.englishName}
           </h3>
           <span
-            className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium shrink-0
+            className={`text-[6px] px-1.5 py-0.5 rounded-full  
                         ${surah.revelationType === 'Meccan'
-                          ? 'bg-amber-100 text-amber-700'
-                          : 'bg-blue-100  text-blue-700'
-                        }`}
+                ? 'bg-amber-100/70 text-amber-600'
+                : 'bg-blue-100/70 text-blue-600'
+              }`}
           >
             {surah.revelationType}
           </span>

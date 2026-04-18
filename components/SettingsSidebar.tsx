@@ -49,7 +49,7 @@ export default function SettingsSidebar() {
 
       {/*  Panel  */}
       <aside
-        className="sidebar-enter fixed right-0 top-0 h-full w-[320px] bg-white z-50
+        className="sidebar-enter fixed right-0 top-0 h-full w-[320px] md:w-[360px] bg-white z-50
                    flex flex-col shadow-2xl border-l border-gray-100"
         role="complementary"
         aria-label="Display settings"
