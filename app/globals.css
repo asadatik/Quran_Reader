@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --page-bg:    #f4f1eb;
+  --card-bg:    #ffffff;
+  --text-main:  #1a1a2e;
+  --text-muted: #6b7280;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #e5e7eb; }
+::-webkit-scrollbar-thumb { background: #16a34a; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #15803d; }
+
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #d1fae5;
+  outline: none;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #15803d;
+  border: 3px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type='range']::-webkit-slider-thumb:hover { background: #166534; }
+input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #15803d;
+  border: 3px solid #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+
+.arabic-block {
+  direction: rtl;
+  text-align: right;
+  line-height: 2;
+  unicode-bidi: embed;
+}
+
+
+.sidebar-enter {
+  animation: slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+
+.ayah-fade {
+  animation: ayahFadeIn 0.35s ease-out both;
+}
+@keyframes ayahFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+.ayah-fade { animation-delay: var(--delay, 0ms); }
+
+
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 400% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
