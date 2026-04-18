@@ -87,7 +87,7 @@ export default function SurahCard({ surah }: Props) {
         </p>
       </div>
 
-      {/* Chevron */}
+
       <ChevronRight
         className="w-4 h-4 text-gray-300 group-hover:text-gray-500
                    group-hover:translate-x-0.5 transition-all shrink-0"

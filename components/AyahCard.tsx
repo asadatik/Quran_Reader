@@ -4,19 +4,19 @@ import { AyahWithTranslation } from '@/types';
 import { useSettings } from '@/context/SettingsContext';
 
 interface Props {
-  ayah:        AyahWithTranslation;
+  ayah: AyahWithTranslation;
   surahNumber: number;
 
-  delay?:      number;
+  delay?: number;
 }
 
 export default function AyahCard({ ayah, surahNumber, delay = 0 }: Props) {
   const { settings, isReady } = useSettings();
 
- 
-  const arabicSize      = isReady ? settings.arabicFontSize      : 30;
+
+  const arabicSize = isReady ? settings.arabicFontSize : 30;
   const translationSize = isReady ? settings.translationFontSize : 16;
-  const fontFamily      =
+  const fontFamily =
     isReady && settings.arabicFont === 'Lateef'
       ? 'var(--font-lateef)'
       : 'var(--font-amiri)';
@@ -49,8 +49,9 @@ export default function AyahCard({ ayah, surahNumber, delay = 0 }: Props) {
           <span className="font-medium text-gray-500">
             {surahNumber}:{ayah.numberInSurah}
           </span>
+
           {/* Sajda indicator */}
-          {ayah.sajda && ayah.sajda !== false && (
+          {typeof ayah.sajda === 'object' && ayah.sajda !== null && (
             <span
               className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-medium"
               title="Sajda verse"
@@ -62,12 +63,12 @@ export default function AyahCard({ ayah, surahNumber, delay = 0 }: Props) {
       </div>
 
       <div className="px-5 py-5">
-    
+
         <p
           className="arabic-block text-gray-900 mb-5"
           style={{
             fontFamily,
-            fontSize:   `${arabicSize}px`,
+            fontSize: `${arabicSize}px`,
             lineHeight: 2,
           }}
         >
