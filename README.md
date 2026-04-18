@@ -2,6 +2,9 @@
 
 A minimalist, high-performance Quran reading application built with **Next.js 14**. Designed for a peaceful and distraction-free experience with a modern "Emerald" aesthetic and seamless customization.
 
+## Live Demo
+🔗 https://your-link.vercel.app
+
 ###  Key Features
 * **Full Quran (SSG):** All 114 Surahs are pre-rendered for instant, lightning-fast loading.
 * **Premium Emerald UI:** A clean, glassmorphic design inspired by modern Islamic aesthetics.
@@ -17,35 +20,36 @@ A minimalist, high-performance Quran reading application built with **Next.js 14
 * **Icons:** Lucide React
 * **Data Source:** Al-Quran Cloud API
 
-###  Getting Started
 
-1. **Clone the project:**
-   ```bash
-   git clone [https://github.com/asadatik/Quran_Reader.git](https://github.com/asadatik/Quran_Reader.git)
-Install dependencies:
+## Getting Started
 
-Bash
+### 1. Clone the project
+```bash
+git clone https://github.com/asadatik/Quran_Reader.git
+cd Quran_Reader
+```
+
+### 2. Install dependencies
+```bash
 npm install
-Run the development server:
+```
 
-Bash
+### 3. Run development server
+```bash
 npm run dev
-Open http://localhost:3000 to see the app live.
+```
 
-Build for production:
+Open http://localhost:3000 to see the app.
 
-Bash
+### 4. Build for production
+```bash
 npm run build
- Project Structure
-/app: Route-based pages and layouts (SSG/ISR logic).
+```
 
-/components: Reusable UI like AyahCard, SurahCard, and SettingsSidebar.
+## Project Structure
 
-/context: State management for display settings and persistence.
-
-/lib: Clean API helpers for fetching Quranic data.
-
-/types: Centralized TypeScript definitions.
-
-The Goal
-The mission was to build a modern tool for the Ummah that balances technology with tranquility. By focusing on clean typography and a minimalist interface, this app ensures that the focus remains entirely on the words of the Quran
+- `/app` → Route-based pages (SSG/ISR)
+- `/components` → UI components (AyahCard, SurahCard, SettingsSidebar)
+- `/context` → State management (settings + persistence)
+- `/lib` → Data fetching utilities
+- `/types` → TypeScript types
