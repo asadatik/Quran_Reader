@@ -3,7 +3,7 @@
 A minimalist, high-performance Quran reading application built with **Next.js 14**. Designed for a peaceful and distraction-free experience with a modern "Emerald" aesthetic and seamless customization.
 
 ## Live Demo
-🔗 https://your-link.vercel.app
+🔗 https://quran-app-six-iota.vercel.app
 
 ###  Key Features
 * **Full Quran (SSG):** All 114 Surahs are pre-rendered for instant, lightning-fast loading.

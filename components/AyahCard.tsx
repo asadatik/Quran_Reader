@@ -31,7 +31,7 @@ export default function AyahCard({ ayah, surahNumber, delay = 0 }: Props) {
       <div className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-gray-50">
         {/* Verse number */}
         <div
-          className="w-9 h-9 rounded-full bg-emerald-700 text-white text-sm font-bold
+          className="w-6 h-6 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 text-white text-sm font-bold
                      flex items-center justify-center shadow-sm shrink-0"
         >
           {ayah.numberInSurah}
