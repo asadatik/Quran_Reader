@@ -46,13 +46,42 @@ Open http://localhost:3000 to see the app.
 npm run build
 ```
 
-## Project Structure
-
-- `/app` → Route-based pages (SSG/ISR)
-- `/components` → UI components (AyahCard, SurahCard, SettingsSidebar)
-- `/context` → State management (settings + persistence)
-- `/lib` → Data fetching utilities
-- `/types` → TypeScript types
+## 📁 Project Structure
+ 
+```
+quran-app/
+├── app/
+│   ├── globals.css              
+│   ├── layout.tsx               
+│   ├── page.tsx                 
+│   ├── loading.tsx             
+│   ├── error.tsx              
+│   └── surah/
+│       └── [id]/
+│           ├── page.tsx         # Surah detail page (SSG)
+│           ├── loading.tsx     
+│           └── error.tsx       
+├── components/
+│   ├── Navbar.tsx               
+│   ├── SearchBar.tsx            # Search input component
+│   ├── SettingsSidebar.tsx      # Settings panel (font + size controls)
+│   ├── SurahCard.tsx            # Surah card for grid
+│   ├── AyahCard.tsx             # Individual verse/ayah display
+│   ├── SurahListClient.tsx      # Home page client (search state)
+│   └── SurahPageClient.tsx      # Surah page client (search + nav)
+├── context/
+│   └── SettingsContext.tsx      # Settings state + localStorage persistence
+├── lib/
+│   └── api.ts
+├── types/
+│   └── index.ts               
+├── tailwind.config.ts         
+├── tsconfig.json
+├── next.config.js
+├── postcss.config.js         
+├── package.json
+└── README.md                   
+```
 
 
 ### API Source
