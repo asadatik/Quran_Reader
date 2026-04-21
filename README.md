@@ -53,3 +53,13 @@ npm run build
 - `/context` → State management (settings + persistence)
 - `/lib` → Data fetching utilities
 - `/types` → TypeScript types
+
+
+### API Source
+- **Endpoint**: [Al-Quran Cloud API](https://alquran.cloud/api)
+- **Editions**:
+  - `quran-uthmani` — Standard Arabic Quran text
+  - `en.asad` — Muhammad Asad's English translation
+- **Rate limits**: No strict rate limits; requests cached with ISR
+
+
